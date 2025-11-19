@@ -8,36 +8,38 @@ html , body{
     width: 100%;
 }
 
-.main{
+.main {
+    display: flex;
+    align-items: center;    /* vertically center */
+    justify-content: center; /* horizontally center */
+    height: 100%;
+    width: 100%;
+}
+
+.box{
+    background-color: aquamarine;
     height: 400px;
     width: 400px;
     border: 5px solid black;
-    background-color: burlywood;
     border-radius: 10px;
+}
+
+button{
+    display: flex;
+    align-items: center;    /* vertically center */
+    justify-content: center;
     position: absolute;
-    
-}
-
-h2{
-    margin: 150px 150px 50px 150px;
-    font-size: 40px;
-    font-family: 'Times New Roman', Times, serif;
-}
-button {
-    background-color: rgb(132, 247, 114);
-    border:2px solid darkcyan;
-    border-radius: 5px;
-    padding: 10px 15px;
-    font-size: 18px;
-    margin: 30px;
+    margin: 20px;
+    padding: 20px 20px;
+    font-size: 16px;
     cursor: pointer;
-    /* align-items: center; */
-    gap: 10px;
+    border-radius: 10px;
+    top: 70%;
+    bottom:30%;
+    left: 40%;
+    right:40%;
 }
 
-
-
-button  :active{
-    scale: 0.95;
-    
+button :active{
+    scale: 1.2;
 }
