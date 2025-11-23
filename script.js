@@ -1,72 +1,28 @@
-var btn = document.querySelector("button");
-var box = document.querySelector(".box");
-var h1 = document.querySelector("h1");
-var main = document.querySelector(".main");
+var main = document.querySelector('.main');
+var btn = document.querySelector('button');
 
-var arr=[
-    {
-        team:"RCB",
-        primary:"red",
-        secondary:"green"
-    },
-    {
-        team:"CSK",
-        primary:"yellow",
-        secondary:"blue"
-    },
+btn.addEventListener('click', function() {
+    var div = document.createElement('div');
+    div.style.width = '100px';
+    div.style.height = '100px';
 
-    {
-        team:"MI",
-        primary:"blue",
-        secondary:"silver"
-    },
+    var c1 = Math.floor(Math.random() * 256);
+    var c2 = Math.floor(Math.random() * 256);
+    var c3 = Math.floor(Math.random() * 256);
 
-    {
-        team:"PBSK",
-        primary:"crimson",
-        secondary:"silver"
-    },
+    div.style.backgroundColor = `rgb(${c1}, ${c2}, ${c3})`;
 
-    {
-        team:"SRH",
-        primary:"orange",
-        secondary:"black"
-    },
+    div.style.top= Math.floor(Math.random() * 100) + '%';
+    div.style.left= Math.floor(Math.random() * 100) + '%';
+    div.style.rotate = Math.floor(Math.random() * 360) + 'deg';
+    div.style.scale = Math.random() + 0.8;
+    div.style.transform = 'translate(-50%, -50%)';
 
-    {
-        team:"KKR",
-        primary:"purple",
-        secondary:"yellow"
-    },
-
-    {
-        team:"RR",
-        primary:"pink",
-        secondary:"blue"
-    },
-
-    {
-        team:"GT",
-        primary:"dark blue",
-        secondary:"gold"
-    },
-
-    {
-        team:"LSG",
-        primary:"light blue",
-        secondary:"orange"
-    },
+    div.style.position = 'absolute';
+    div.style.overflow = 'hidden';
+    div.style.border = '2px solid white';
+    div.style.borderRadius = '5px';
     
-    {
-        team:"DC",
-        primary:"blue",
-        secondary:"red"
-    }
-]
 
-btn.addEventListener("click", function() {
-    var winner=arr[ Math.floor(Math.random()*arr.length) ];
-    h1.innerText=winner.team;
-    main.style.backgroundColor=winner.primary;
-    box.style.backgroundColor=winner.secondary;
+    main.appendChild(div);
 });
