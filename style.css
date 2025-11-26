@@ -42,47 +42,43 @@ button:active{
 }
 
 .card{
-    /* height: 250px; */
-    width: 380px;
+    height: 330px;
+    width: 250px;
     background-color: white;
-    border-radius: 10px;
-    padding: 40px 20px;
+    padding: 20px;
+    position: relative;
 }
 
-.card p{
-    font-size:14px ;
-    text-align: center;
-    margin-bottom: 15px;
-    font-weight: 500;
+.card div{
+    overflow: hidden;
+    position: relative;
 }
 
-.card p span{
-    font-weight: bold;
-    color: royalblue;
-}
-
-.outer{
-    height: 15px;
+.card img{
     width: 100%;
-    background-color: gainsboro;
+    height: 240px;  
+    object-fit: cover;
+    margin-bottom: 20px;
     border-radius: 10px;
 }
 
-.inner{
-    height: 100%;
-    width: 0%;
-    background-color: green;
-    border-radius: 10px;
+.card h2{
+    font-size: 20px;
 }
 
-.bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.bottom h2{
-    font-size: 30px;
-    font-family: monospace;
+.card i{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 70px ;
+    opacity: 0;
+    /* background: linear-gradient(to right bottom, rgb(158, 9, 158), rgb(185, 93, 108)); */
+    transition: all 0.4s cubic-bezier(.65,1,.77,1.44);
+    color:transparent ;
+    background-image: url(https://img.freepik.com/premium-vector/vertical-background-with-smooth-gradient-vector-illustration_522680-306.jpg?semt=ais_hybrid&w=740&q=80);
+    background-size: cover;
+    /* overflow: hidden; */
+    background-clip: text;
+    -webkit-background-clip: text;
+    transform: translate(-50% ,-50%) scale(0) rotate(-60deg);
 }
