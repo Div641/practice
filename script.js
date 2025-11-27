@@ -1,22 +1,4 @@
-var img = document.querySelector('.card img');
-var love = document.querySelector('#love');
-
-img.addEventListener('dblclick', function() {
-    love.style.opacity = 1;
-    love.style.transform = 'translate(-50% ,-50%) scale(1) rotate(0deg)';
-
-    setTimeout(function() {
-        love.style.transform = 'translate(-50% ,-300%) scale(1) rotate(60deg)';
-
-        },800);
-
-    setTimeout(function() {
-        love.style.opacity = 0
-        // love.style.transform = 'translate(-50% ,-50%) scale(0) rotate(-60deg)';
-    },1000);
-    
-    setTimeout(function() {
-        // love.style.opacity = 0
-        love.style.transform = 'translate(-50% ,-50%) scale(0) rotate(-60deg)';
-    },1200);
+document.addEventListener("mousemove",(e) => {
+    document.body.style.setProperty("--x",e.clientX +'px')
+    document.body.style.setProperty("--y", e.clientY+'px')
 });
