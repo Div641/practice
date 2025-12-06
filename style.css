@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
@@ -89,3 +90,185 @@ button {
     font-weight: bold;
     font-size: 14px;
 }
+=======
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+    /* color: white; */
+}
+
+main    {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right bottom , rgb(25, 25, 25),rgb(33, 33, 33),black);
+    padding: 20px;
+    overflow: auto;
+    /* scroll-snap-type: y mandatory; */
+}
+
+section{
+    height: 100%;
+    width: 350px;
+    background-color: black;
+    border-radius: 10px;
+    margin: auto;
+    /* overflow: hidden; */
+    
+}
+
+.all-reels{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    overflow: auto;
+    /* background-color: crimson; */
+    /* overflow: hidden;     overflow remove kiya kyuki like comment k options bahar ko the */
+    scroll-snap-type: y mandatory; 
+
+    /* to hide scrollbar from firefox +old edge etc (basically in chrome too this only worked for us) */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    scroll-behavior: smooth;
+}
+
+
+/* only hides scrollbar from - Chrome/ Safari /Edge */
+.all-reels  ::-webkit-scrollbar {
+   display: none;
+}
+
+.reel{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: seagreen;
+    margin-bottom: 20px;
+    /* overflow: hidden; */
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.reel video{
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+ }
+
+ .reel .bottom{
+    padding: 30px 20px;
+    /* background: linear-gradient(black,black); */
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+
+ }
+
+ .bottom .user {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 10px;
+    margin-bottom: 20px;
+ }
+
+ .bottom .user img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+ }
+
+ .bottom .user h4{
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+ }
+
+ .bottom .user button {
+    background-color: transparent;
+    padding: 2px 4px;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+    border-radius: 2px ;
+    border: 1px solid white;
+ }
+
+ .bottom>h3 {
+    font-size: 20px;
+    font-weight:500 ;
+    color: white;
+ }
+
+ .right {
+    height: 250%;
+    width: 40px;
+    padding: 30px;
+    color: white;
+
+    position: absolute;
+    right: 10%;
+    top: 12%;
+    /* right: 6%;
+    left: 80%; */
+    /* bottom: 30%; 
+    top: 50%; */
+    
+
+    transform: translateY(-50%) translateX(40%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    gap: 15px;
+    /* overflow: hidden; */
+    /* transform: translateX(100%); */
+    /* background: linear-gradient(to right, transparent,rgba(0, 0, 0 , 0.284)); */
+
+
+    /* position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; */
+ }
+
+ .right h4{
+   cursor: pointer;
+ }
+
+ .right i {
+    font-size: 20px;
+ }
+
+ .right h6{
+    font-size:18px ;
+    font-weight: 500;
+
+ }
+
+ .right>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ .love {
+   color:red;
+ }
+>>>>>>> fbf7d7f66ef4ef9a3927caa369502bb857d3905f
